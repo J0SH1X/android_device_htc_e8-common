@@ -27,7 +27,7 @@
 # against the traditional rules of inheritance).
 
 # Inherit from common msm8974-common
--include device/htc/e8-msm8974-common/BoardConfigCommon.mk
+-include device/htc/e8-msm8974-common/BoardConfig.mk
 
 TARGET_BOARD_INFO_FILE ?= device/htc/mecul/board-info.txt
 
