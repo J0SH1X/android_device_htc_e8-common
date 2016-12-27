@@ -35,10 +35,10 @@ if [ -f ../$DEVICE/device-proprietary-files.txt ]; then
 fi
 
 LINEEND=" \\"
-COUNT=`wc -l ../e8-common/proprietary-files.txt | awk {'print $1'}`
+COUNT=`wc -l ../mecul/proprietary-files.txt | awk {'print $1'}`
 DISM=`egrep -c '(^#|^$)' ../e8-common/proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' ../e8-common/proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' ../mecul/proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
   if [[ ! "$FILE" =~ ^-.* ]]; then
     echo "        $OUTDIR/proprietary/$FILE:/system/$FILE$LINEEND" >> $MAKEFILE
@@ -110,10 +110,10 @@ PRODUCT_COPY_FILES += \\
 EOF
 
 LINEEND=" \\"
-COUNT=`wc -l ../e8-common/common-proprietary-files.txt | awk {'print $1'}`
-DISM=`egrep -c '(^#|^$)' ../e8-common/common-proprietary-files.txt`
+COUNT=`wc -l ../mecul/common-proprietary-files.txt | awk {'print $1'}`
+DISM=`egrep -c '(^#|^$)' ../mecul/common-proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' ../e8-common/common-proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' ../mecul/common-proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
   if [[ ! "$FILE" =~ ^-.* ]]; then
     echo "        $OUTDIR/proprietary/$FILE:/system/$FILE$LINEEND" >> $MAKEFILE
