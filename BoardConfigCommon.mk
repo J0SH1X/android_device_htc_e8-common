@@ -29,10 +29,10 @@
 # Inherit from common msm8974-common
 -include device/htc/e8-msm8974-common/BoardConfigCommon.mk
 
-TARGET_BOARD_INFO_FILE ?= device/htc/e8-common/board-info.txt
+TARGET_BOARD_INFO_FILE ?= device/htc/mecul/board-info.txt
 
 # Includes
-TARGET_SPECIFIC_HEADER_PATH += device/htc/e8-common/include
+TARGET_SPECIFIC_HEADER_PATH += device/htc/mecul/include
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
@@ -46,10 +46,10 @@ BOARD_NFC_HAL_SUFFIX := msm8974
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/htc/e8-common/sepolicy
+BOARD_SEPOLICY_DIRS += device/htc/mecul/sepolicy
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/htc/e8-common/releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/htc/mecul/releasetools
 
 # Inherit from the proprietary version
--include vendor/htc/e8-common/BoardConfigVendor.mk
+-include vendor/htc/mecul/BoardConfigVendor.mk
