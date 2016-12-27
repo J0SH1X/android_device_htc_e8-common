@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, vendor/htc/e8-common/e8-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/mecul/e8-common-vendor.mk)
 
 # Inherit from msm8974-common
 $(call inherit-product, device/htc/e8-msm8974-common/msm8974-common.mk)
@@ -23,7 +23,7 @@ $(call inherit-product, device/htc/e8-msm8974-common/msm8974-common.mk)
 -include $(LOCAL_PATH)/system_prop.mk
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += device/htc/e8-common/overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/megul/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \

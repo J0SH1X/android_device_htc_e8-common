@@ -54,8 +54,8 @@ rm -rf $BASE/*
 DEVBASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $DEVBASE/*
 
-extract ../../$VENDOR/e8-common/common-proprietary-files.txt $BASE
-extract ../../$VENDOR/e8-common/proprietary-files.txt $DEVBASE
+extract ../../$VENDOR/mecul/common-proprietary-files.txt $BASE
+extract ../../$VENDOR/mecul/proprietary-files.txt $DEVBASE
 extract ../../$VENDOR/$DEVICE/device-proprietary-files.txt $DEVBASE
 
 ./setup-makefiles.sh
