@@ -36,7 +36,7 @@ fi
 
 LINEEND=" \\"
 COUNT=`wc -l ../mecul/proprietary-files.txt | awk {'print $1'}`
-DISM=`egrep -c '(^#|^$)' ../e8-common/proprietary-files.txt`
+DISM=`egrep -c '(^#|^$)' ../mecul/proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
 for FILE in `egrep -v '(^#|^$)' ../mecul/proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
@@ -64,7 +64,7 @@ done
 
 # Pick up overlay for features that depend on non-open-source files
 
-\$(call inherit-product, vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk)
+\$(call inherit-product, vendor/htc/$DEVICE/$DEVICE-vendor-blobs.mk)
 EOF
 
 (cat << EOF) > ../../../$OUTDIR/BoardConfigVendor.mk
@@ -86,7 +86,7 @@ EOF
 EOF
 
 export DEVICE=e8-common
-OUTDIR=vendor/$VENDOR/$DEVICE
+OUTDIR=vendor/htc/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
 (cat << EOF) > $MAKEFILE
@@ -144,7 +144,7 @@ PRODUCT_PACKAGES += \\
     CIRModule \\
     htcirlibs
 
-\$(call inherit-product, vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk)
+\$(call inherit-product, vendor/htc/$DEVICE/$DEVICE-vendor-blobs.mk)
 EOF
 
 (cat << EOF) > ../../../$OUTDIR/BoardConfigVendor.mk
