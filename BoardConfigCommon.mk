@@ -48,8 +48,5 @@ BOARD_NFC_HAL_SUFFIX := msm8974
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/htc/mecul/sepolicy
 
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/htc/mecul/releasetools
-
 # Inherit from the proprietary version
 -include vendor/htc/mecul/BoardConfigVendor.mk
