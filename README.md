@@ -1,4 +1,4 @@
- Device configuration for HTC One (M8)
+ Device configuration for HTC One (E8)
 
 ## Spec Sheet
 
